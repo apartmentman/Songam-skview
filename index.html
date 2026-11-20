@@ -10,6 +10,10 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="송암공원 중흥S클래스 SK VIEW | 분양안내 · 방문예약 1800-6589">
 <meta property="og:description" content="송암공원을 품은 1,575세대 프리미엄 대단지. 전용 84㎡·108㎡, 입주예정 2027년 12월. 방문예약 1800-6589.">
+<meta property="og:image" content="https://apartmentman.github.io/Songam-skview/images/perspective.jpg">
+<meta property="og:image:width" content="1350">
+<meta property="og:image:height" content="687">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,74 +136,43 @@ button{font-family:inherit}
 
 /* ---------- 히어로 ---------- */
 .hero{
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(120% 100% at 12% 0%,#1d4a3a 0%,#122f26 42%,#0a211a 74%,#071e17 100%);
-  color:#fff;
+  position:relative;overflow:hidden;color:#fff;
+  background:#071e17 url("images/perspective.jpg") center 40%/cover no-repeat;
 }
 .hero::before{
   content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:
-    linear-gradient(to right,rgba(226,203,152,.06) 1px,transparent 1px);
-  background-size:25% 100%;
-  opacity:.55;
+  background:
+    linear-gradient(96deg,rgba(5,21,16,.95) 0%,rgba(6,24,19,.87) 32%,rgba(6,24,19,.55) 62%,rgba(6,24,19,.3) 100%),
+    linear-gradient(to top,rgba(5,21,16,.9) 0%,rgba(5,21,16,.2) 32%,rgba(5,21,16,0) 58%);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(to right,rgba(226,203,152,.05) 1px,transparent 1px);
+  background-size:25% 100%;opacity:.5;
 }
 .hero-inner{
-  position:relative;display:grid;grid-template-columns:1.04fr .96fr;gap:54px;
-  align-items:center;padding:86px 0 150px;
+  position:relative;z-index:2;display:flex;align-items:center;
+  min-height:600px;padding:92px 0 150px;
 }
-.hero-copy{max-width:560px}
+.hero-copy{max-width:600px}
 .hero .eyebrow{color:var(--gold-light)}
-.hero-loc{margin-top:26px;font-size:12.5px;letter-spacing:.18em;color:rgba(255,255,255,.55);font-weight:600}
+.hero-loc{margin-top:26px;font-size:12.5px;letter-spacing:.18em;color:rgba(255,255,255,.6);font-weight:600}
 .hero h1{
   margin-top:12px;font-size:clamp(34px,4.6vw,54px);line-height:1.26;letter-spacing:-.045em;font-weight:700;
+  text-shadow:0 2px 26px rgba(0,0,0,.35);
 }
 .hero h1 .gold{color:var(--gold-light);font-weight:600}
 .hero h1 .en{display:inline-block;margin-top:6px;font-size:.72em;letter-spacing:.02em;color:rgba(255,255,255,.94)}
 .hero-lede{
-  margin-top:22px;font-size:clamp(15px,1.5vw,16.5px);line-height:1.85;color:rgba(255,255,255,.78);max-width:470px;
+  margin-top:22px;font-size:clamp(15px,1.5vw,16.5px);line-height:1.85;color:rgba(255,255,255,.82);max-width:470px;
 }
 .hero-lede strong{color:#fff;font-weight:600}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
 .hero-note{
-  display:flex;align-items:center;gap:8px;margin-top:26px;font-size:12.5px;color:rgba(255,255,255,.6);
+  display:flex;align-items:center;gap:8px;margin-top:26px;font-size:12.5px;color:rgba(255,255,255,.66);
 }
 .hero-note .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none}
-
-.hero-figure{position:relative;margin:0}
-.hero-frame{
-  position:relative;border-radius:22px;overflow:hidden;
-  border:1px solid rgba(226,203,152,.28);
-  background:#0f2b22;
-  box-shadow:0 50px 90px -50px rgba(0,0,0,.85);
-}
-.hero-frame::after{
-  content:"";position:absolute;inset:10px;border:1px solid rgba(226,203,152,.16);
-  border-radius:14px;pointer-events:none;
-}
-.hero-art{display:block;width:100%;height:auto}
-.hero-photo{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/4.3}
-.hero-figure.has-photo .hero-art,
-.hero-figure.has-photo .hero-tag{display:none}
-.hero-tag{
-  position:absolute;left:22px;bottom:20px;display:inline-flex;align-items:center;gap:7px;
-  padding:6px 12px;border-radius:999px;background:rgba(7,30,23,.62);
-  border:1px solid rgba(226,203,152,.3);
-  font-size:10.5px;letter-spacing:.06em;color:rgba(240,227,198,.85);
-  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
-}
-.hero-badge{
-  position:absolute;right:-14px;bottom:-22px;
-  background:#fff;color:var(--green-800);border-radius:16px;padding:16px 20px;
-  box-shadow:0 26px 50px -26px rgba(0,0,0,.6);
-  display:flex;align-items:center;gap:14px;
-}
-.hero-badge .eb-label{font-size:10px;letter-spacing:.2em;color:var(--gold);font-weight:700}
-.hero-badge strong{display:block;font-size:21px;letter-spacing:.01em;line-height:1.2;margin-top:2px;font-weight:700}
-.hero-badge .eb-icon{
-  width:40px;height:40px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;flex:none;
-}
-.hero-badge svg{width:19px;height:19px;stroke:var(--green-700)}
+.hero-credit{margin-top:12px;font-size:11px;line-height:1.65;color:rgba(255,255,255,.46);letter-spacing:.01em}
 
 /* ---------- 핵심 지표 ---------- */
 .stats-wrap{position:relative;z-index:3;margin-top:-72px}
@@ -238,30 +211,87 @@ section{scroll-margin-top:86px}
 .spec-row dd{font-size:14.5px;color:var(--ink);font-weight:500}
 .spec-row dd em{font-style:normal;color:var(--muted);font-size:12.5px;margin-left:6px}
 
-/* ---------- 사진 자리 ---------- */
-.photo-slot{
-  position:relative;margin:0;border-radius:var(--radius);overflow:hidden;
-  border:1px dashed rgba(194,161,94,.5);
-  background:
-    repeating-linear-gradient(45deg,#f8f4ea 0 14px,#f4eee1 14px 28px);
-  display:grid;place-items:center;min-height:220px;
+/* ---------- 사진 카드 · 라이트박스 ---------- */
+.shot{margin:0}
+.shot-btn{
+  position:relative;display:block;width:100%;padding:0;border:0;border-radius:var(--radius);
+  overflow:hidden;background:#0f2b22;cursor:zoom-in;line-height:0;
+  box-shadow:0 34px 70px -50px rgba(13,43,34,.75);
 }
-.photo-slot[data-ratio="4x3"]{aspect-ratio:4/3}
-.photo-slot[data-ratio="3x2"]{aspect-ratio:3/2}
-.photo-slot[data-ratio="21x9"]{aspect-ratio:21/9;min-height:0}
-.ph-inner{text-align:center;padding:26px}
-.ph-inner svg{width:30px;height:30px;stroke:var(--gold);opacity:.85;margin-inline:auto}
-.ph-title{margin-top:12px;font-size:13px;font-weight:700;color:#7f7358;letter-spacing:-.01em}
-.ph-sub{margin-top:5px;font-size:11.5px;color:#a2987f}
-.photo-slot figcaption.ph-cap{
-  position:absolute;left:0;right:0;bottom:0;padding:10px 16px;font-size:11.5px;
-  color:#8a7f66;background:linear-gradient(to top,rgba(244,238,225,.95),rgba(244,238,225,0));
+.shot-btn img{display:block;width:100%;height:auto;transition:transform .55s ease}
+@media (hover:hover){.shot-btn:hover img{transform:scale(1.012)}}
+.shot-btn .zoom-hint{
+  position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:6px;
+  height:30px;padding:0 12px;border-radius:999px;background:rgba(7,30,23,.72);
+  border:1px solid rgba(226,203,152,.34);color:#f0e3c6;
+  font-size:11px;font-weight:600;line-height:1;letter-spacing:.02em;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
 }
-.photo-slot.has-photo{border-style:solid;border-color:var(--line);background:#0f2b22;padding:0;display:block}
-.photo-slot.has-photo .ph-inner,
-.photo-slot.has-photo .ph-cap{display:none}
-.photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
-.photo-slot.has-photo[data-ratio] img{aspect-ratio:inherit}
+.shot-btn .zoom-hint svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.shot-cap{margin-top:12px;font-size:12.5px;line-height:1.7;color:#8b968f}
+.shot-cap b{display:block;color:var(--green-800);font-weight:700;letter-spacing:-.01em}
+.gallery-note{margin-top:18px;font-size:12px;line-height:1.7;color:#8b968f}
+
+.lightbox{
+  position:fixed;inset:0;z-index:140;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:14px;padding:58px 16px 20px;background:rgba(4,15,11,.94);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+}
+.lightbox img{
+  max-width:100%;max-height:calc(100vh - 158px);width:auto;height:auto;
+  border-radius:10px;background:#fff;box-shadow:0 40px 90px -30px rgba(0,0,0,.85);
+}
+.lb-cap{max-width:760px;text-align:center;font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.75)}
+.lb-tools{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.lb-tools a{
+  display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 15px;border-radius:999px;
+  border:1px solid rgba(226,203,152,.42);color:#f0e3c6;text-decoration:none;font-size:12.5px;font-weight:600;
+}
+.lb-tools a:hover{background:rgba(226,203,152,.14)}
+.lb-close{
+  position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);color:#fff;
+  display:grid;place-items:center;cursor:pointer;
+}
+.lb-close:hover{background:rgba(255,255,255,.18)}
+.lb-close svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+body.lb-open{overflow:hidden}
+
+/* ---------- 단지 조감 ---------- */
+.aerial-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;align-items:stretch}
+.aerial-side{display:grid;gap:16px;grid-template-rows:1fr 1fr}
+.aerial-grid .shot-btn{border-radius:16px;height:100%}
+.aerial-grid .shot-btn img{height:100%;object-fit:cover}
+.aerial-main .shot-btn{border-radius:18px}
+
+/* ---------- 공원 ---------- */
+.park-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:start}
+.park-cards{display:grid;gap:14px;position:sticky;top:96px}
+.park-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.park-card h3{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;
+  font-size:17.5px;letter-spacing:-.02em;color:var(--green-800);font-weight:700;
+}
+.park-card h3 span{font-size:10px;letter-spacing:.16em;color:var(--gold);font-weight:700}
+.park-card .park-sub{margin-top:6px;font-size:13px;color:var(--muted);line-height:1.65}
+.park-card ul{margin-top:12px;display:grid;gap:4px;font-size:12.5px;line-height:1.6;color:#5f6d65}
+.park-card li{position:relative;padding-left:11px}
+.park-card li::before{content:"";position:absolute;left:0;top:.72em;width:4px;height:4px;border-radius:50%;background:rgba(194,161,94,.9)}
+
+/* ---------- 커뮤니티 ---------- */
+.comm-grid{display:grid;grid-template-columns:1fr .95fr;gap:44px;align-items:start}
+.comm-floors{display:grid;gap:14px;position:sticky;top:96px}
+.comm-floor{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.comm-floor b{
+  display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:26px;padding:0 10px;
+  border-radius:8px;background:var(--green-700);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;
+}
+.comm-floor h3{margin-top:12px;font-size:17px;letter-spacing:-.02em;color:var(--green-800);font-weight:700}
+.comm-floor ul{margin-top:10px;display:grid;gap:5px;font-size:13.5px;line-height:1.6;color:#5f6d65}
+.comm-floor li{position:relative;padding-left:11px}
+.comm-floor li::before{content:"";position:absolute;left:0;top:.72em;width:4px;height:4px;border-radius:50%;background:rgba(194,161,94,.9)}
+.comm-note{margin-top:4px;font-size:12px;line-height:1.7;color:#8b968f}
+.comm-figure .shot-btn{background:#fbf9f2}
 
 /* ---------- 입지 ---------- */
 .loc-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
@@ -281,28 +311,49 @@ section{scroll-margin-top:86px}
 .loc-photo{margin-top:24px}
 
 /* ---------- 평형 ---------- */
-.plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.plan-card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
-  display:flex;flex-direction:column;
+.plan-tabs{
+  display:flex;gap:8px;flex-wrap:wrap;padding:6px;background:var(--cream);
+  border:1px solid var(--line);border-radius:18px;
 }
-.plan-head{padding:32px 32px 0}
+.plan-tab{
+  flex:1 1 150px;display:flex;flex-direction:column;gap:3px;align-items:flex-start;
+  padding:12px 16px;border:1px solid transparent;border-radius:13px;background:transparent;
+  cursor:pointer;text-align:left;font-family:inherit;
+  transition:background .22s,border-color .22s,box-shadow .22s;
+}
+.plan-tab b{font-size:19px;font-weight:700;letter-spacing:-.03em;color:var(--green-800);font-variant-numeric:tabular-nums;line-height:1.15}
+.plan-tab span{font-size:11.5px;font-weight:600;color:#8b968f;letter-spacing:-.01em}
+.plan-tab:hover{background:rgba(255,255,255,.72);border-color:rgba(194,161,94,.32)}
+.plan-tab[aria-selected="true"]{background:#fff;border-color:rgba(194,161,94,.55);box-shadow:0 14px 28px -22px rgba(13,43,34,.6)}
+.plan-tab[aria-selected="true"] b{color:var(--green-600)}
+.plan-tab[aria-selected="true"] span{color:#5f6d65}
+
+.plan-panel{
+  display:grid;grid-template-columns:1.22fr .78fr;gap:30px;align-items:start;
+  margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+  box-shadow:0 30px 60px -52px rgba(13,43,34,.7);
+}
+.plan-panel .shot-btn{border-radius:13px;background:#fbf9f2;box-shadow:none}
+.plan-spec{align-self:center}
 .plan-area{display:flex;align-items:baseline;gap:6px;color:var(--green-800)}
-.plan-area b{font-size:44px;font-weight:700;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.plan-area b{font-size:42px;font-weight:700;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
 .plan-area i{font-style:normal;font-size:15px;font-weight:600;color:var(--muted)}
-.plan-pye{margin-top:10px;font-size:13px;color:var(--gold);font-weight:700;letter-spacing:.14em}
-.plan-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.plan-pye{margin-top:8px;font-size:12.5px;color:var(--gold);font-weight:700;letter-spacing:.12em}
+.plan-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
 .plan-tags span{
   font-size:11.5px;font-weight:600;color:var(--green-700);background:var(--cream);
   border:1px solid rgba(194,161,94,.28);border-radius:999px;padding:4px 11px;
 }
-.plan-photo{margin:24px 32px 0}
-.plan-photo.photo-slot{min-height:0;aspect-ratio:4/3}
-.plan-foot{padding:22px 32px 32px;display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto}
-.plan-foot p{font-size:13px;color:var(--muted)}
+.plan-spec dl{margin-top:18px;border-top:1px solid var(--line)}
+.plan-spec .row{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.plan-spec dt{color:#8b968f;font-weight:600}
+.plan-spec dd{color:var(--ink);font-weight:500}
+.plan-feature{margin-top:16px;display:grid;gap:6px;font-size:13px;line-height:1.65;color:#5f6d65}
+.plan-feature li{position:relative;padding-left:11px}
+.plan-feature li::before{content:"";position:absolute;left:0;top:.72em;width:4px;height:4px;border-radius:50%;background:rgba(194,161,94,.9)}
 .plan-link{
+  margin-top:20px;display:inline-flex;align-items:center;gap:6px;
   font-size:13.5px;font-weight:700;color:var(--green-700);text-decoration:none;
-  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
 }
 .plan-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
 .plan-link:hover{color:var(--gold)}
@@ -589,7 +640,7 @@ section{scroll-margin-top:86px}
 
 /* ---------- 반응형 ---------- */
 @media (max-width:1040px){
-  .hero-inner{gap:40px;padding:70px 0 140px}
+  .hero-inner{padding:80px 0 146px}
   .about-grid{gap:40px}
   .nav{gap:18px}
   .nav a{font-size:13.5px}
@@ -597,14 +648,25 @@ section{scroll-margin-top:86px}
 @media (max-width:920px){
   .nav{display:none}
   .header-call{margin-left:auto}
-  .hero-inner{grid-template-columns:1fr;gap:44px;padding:56px 0 120px}
+  .hero::before{
+    background:
+      linear-gradient(to bottom,rgba(5,21,16,.9) 0%,rgba(6,24,19,.86) 50%,rgba(5,21,16,.95) 100%);
+  }
+  .hero-inner{min-height:0;padding:58px 0 122px}
   .hero-copy{max-width:none}
-  .hero-figure{max-width:520px;margin-inline:auto}
-  .hero-badge{right:0;bottom:-18px;padding:13px 16px}
-  .hero-badge strong{font-size:19px}
+  .hero-credit{font-size:10.5px}
   .about-grid{grid-template-columns:1fr;gap:36px}
   .loc-cards{grid-template-columns:1fr}
-  .plan-grid{grid-template-columns:1fr}
+  .aerial-grid,
+  .park-grid,
+  .comm-grid,
+  .plan-panel{grid-template-columns:1fr}
+  .aerial-grid{gap:14px}
+  .aerial-side{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:14px}
+  .park-grid,.comm-grid{gap:28px}
+  .park-cards,.comm-floors{position:static}
+  .plan-panel{gap:22px;padding:18px}
+  .plan-spec{align-self:stretch}
   .term-grid{grid-template-columns:1fr}
   .reserve-grid{grid-template-columns:1fr}
   .form-card{position:static}
@@ -632,16 +694,22 @@ section{scroll-margin-top:86px}
   .hero-cta{gap:8px}
   .hero-cta .btn{flex:1;padding:0 16px;font-size:14.5px}
   .hero-note{font-size:11.5px}
-  .hero-badge{left:auto;right:8px;bottom:-16px}
   .spec-row{grid-template-columns:88px 1fr;gap:12px}
   .spec-row dd{font-size:13.5px}
   .card{padding:20px}
   .cal-day{font-size:13.5px;min-height:36px;border-radius:10px}
   .card-head p{font-size:11.5px}
   .term-card{padding:26px 22px}
-  .plan-head{padding:26px 22px 0}
-  .plan-photo{margin:20px 22px 0}
-  .plan-foot{padding:20px 22px 26px;flex-direction:column;align-items:flex-start;gap:10px}
+  .plan-tabs{gap:6px;padding:5px;border-radius:15px}
+  .plan-tab{flex:1 1 calc(50% - 3px);padding:10px 12px}
+  .plan-tab b{font-size:17px}
+  .plan-tab span{font-size:11px}
+  .plan-panel{padding:14px;border-radius:16px}
+  .plan-area b{font-size:36px}
+  .lightbox{padding:52px 10px 16px;gap:10px}
+  .lightbox img{max-height:calc(100vh - 150px)}
+  .shot-btn .zoom-hint{height:28px;font-size:10.5px}
+  .park-card,.comm-floor{padding:18px}
   .foot-top{flex-direction:column;align-items:flex-start;gap:18px}
   .reserve-top{gap:20px}
   .modal-card{padding:30px 22px 24px}
@@ -656,20 +724,16 @@ section{scroll-margin-top:86px}
 <a class="skip" href="#main">본문 바로가기</a>
 
 <!-- ============================================================
-     ▶ 사진 교체 안내 (수능 사진 전송 제한 해제 후)
-     Drive '송암공원 중흥S클래스 SK뷰 사진 > 블로그 활용 사진' 폴더에서 아래 파일을
-     이 HTML 파일과 같은 폴더에 내려받은 뒤, <script> 상단 PHOTOS 값에 파일명만 적으면
-     자리표시자가 자동으로 실제 사진으로 바뀝니다. (HTML 수정 불필요)
-
-       hero     : 1. 송암중흥S클래스SK뷰 조감도.jpg   (또는 '조감도 글귀.jpg')
-       about    : 3. 송암중흥S클래스SK뷰 단지배치도.jpg
-       location : 13. 송암공원 중흥S클래스 SK뷰 입지.png
-       plan84   : 11. 평면도 84 C타입.png   (9. 84 A타입, 10. 84 B타입도 있음)
-       plan108  : 12. 평면도 108 타입 40평대.png
-
-     ▶ 알림 연동 안내
-     <script> 상단 NOTIFICATION_ENDPOINT 값 하나로 메일(SMS 연동 포함) 알림이 연결됩니다.
-     ============================================================ -->
+     ▶ 이미지 구성 (images/ 폴더)
+       perspective.jpg  히어로 배경 (단지 정면 투시도)
+       aerial.jpg       단지 조감도   · garden.jpg  휴게정원   · plaza.jpg  중앙광장
+       siteplan.jpg     단지배치도 (1,575세대)
+       location.jpg     입지환경 지도
+       park.jpg         송암근린공원 특화 안내 (활빛·솔빛·늘빛마당)
+       community.jpg    커뮤니티 센터 (B1·B2)
+       plan-84a/b/c.jpg · plan-108.jpg  타입별 평면도
+     ※ 방문예약 알림 연동은 <script> 상단 NOTIFICATION_ENDPOINT 값 하나로 동작합니다.
+     ============================================================ -->     ============================================================ -->
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
@@ -686,9 +750,10 @@ section{scroll-margin-top:86px}
     </a>
     <nav class="nav" aria-label="주요 섹션">
       <a href="#about">사업개요</a>
-      <a href="#location">입지환경</a>
+      <a href="#aerial">단지조감</a>
+      <a href="#location">입지·공원</a>
+      <a href="#community">커뮤니티</a>
       <a href="#plans">평형안내</a>
-      <a href="#terms">분양조건</a>
       <a href="#reserve">방문예약</a>
     </nav>
     <a class="header-call" href="tel:1800-6589" aria-label="방문예약 전화 1800-6589">
@@ -728,116 +793,8 @@ section{scroll-margin-top:86px}
           </a>
         </div>
         <p class="hero-note"><span class="dot" aria-hidden="true"></span>1차 계약금 500만 원 정액제 · 선착순 동·호수 지정</p>
+        <p class="hero-credit">※ 조감도는 이해를 돕기 위한 이미지로, 실제 시공과 다를 수 있습니다.</p>
       </div>
-
-      <figure class="hero-figure" data-photo="hero" data-alt="송암공원 중흥S클래스 SK VIEW 단지 조감도">
-        <div class="hero-frame">
-          <svg class="hero-art" viewBox="0 0 800 780" preserveAspectRatio="xMidYMax slice" role="img" aria-label="송암공원과 어우러진 단지 조감 일러스트">
-            <defs>
-              <linearGradient id="hSky" x1="0" y1="0" x2=".35" y2="1">
-                <stop offset="0%" stop-color="#1f4f3d"/>
-                <stop offset="52%" stop-color="#12352a"/>
-                <stop offset="100%" stop-color="#081f18"/>
-              </linearGradient>
-              <linearGradient id="hTower" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#356f58"/>
-                <stop offset="55%" stop-color="#1d4738"/>
-                <stop offset="100%" stop-color="#143327"/>
-              </linearGradient>
-              <linearGradient id="hTower2" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#2a6150"/>
-                <stop offset="100%" stop-color="#123026"/>
-              </linearGradient>
-              <radialGradient id="hGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#e2cb98" stop-opacity=".55"/>
-                <stop offset="100%" stop-color="#e2cb98" stop-opacity="0"/>
-              </radialGradient>
-              <pattern id="hWin" width="13" height="19" patternUnits="userSpaceOnUse">
-                <rect x="2.5" y="5" width="8" height="6.5" rx="1" fill="#ecd9ab" opacity=".17"/>
-              </pattern>
-              <pattern id="hWin2" width="11" height="16" patternUnits="userSpaceOnUse">
-                <rect x="2" y="4" width="6.5" height="5" rx=".8" fill="#ecd9ab" opacity=".1"/>
-              </pattern>
-            </defs>
-
-            <rect width="800" height="780" fill="url(#hSky)"/>
-            <circle cx="600" cy="176" r="190" fill="url(#hGlow)" opacity=".5"/>
-            <circle cx="600" cy="176" r="86" fill="#f0e3c6" opacity=".13"/>
-            <circle cx="600" cy="176" r="128" fill="none" stroke="#e2cb98" stroke-opacity=".22"/>
-            <circle cx="600" cy="176" r="170" fill="none" stroke="#e2cb98" stroke-opacity=".1"/>
-
-            <g stroke="#e2cb98" stroke-opacity=".07">
-              <path d="M0 700H800M0 660H800M0 620H800"/>
-            </g>
-
-            <!-- 뒷줄 동 -->
-            <g opacity=".5">
-              <rect x="72" y="316" width="68" height="330" rx="2" fill="url(#hTower2)"/>
-              <rect x="72" y="316" width="68" height="330" rx="2" fill="url(#hWin2)"/>
-              <rect x="452" y="286" width="62" height="360" rx="2" fill="url(#hTower2)"/>
-              <rect x="452" y="286" width="62" height="360" rx="2" fill="url(#hWin2)"/>
-              <rect x="700" y="344" width="58" height="302" rx="2" fill="url(#hTower2)"/>
-              <rect x="700" y="344" width="58" height="302" rx="2" fill="url(#hWin2)"/>
-            </g>
-
-            <!-- 앞줄 동 -->
-            <g>
-              <rect x="152" y="248" width="102" height="398" rx="3" fill="url(#hTower)"/>
-              <rect x="152" y="248" width="102" height="398" rx="3" fill="url(#hWin)"/>
-              <path d="M152 248h102" stroke="#e2cb98" stroke-opacity=".45" stroke-width="1.4"/>
-
-              <rect x="272" y="330" width="86" height="316" rx="3" fill="url(#hTower)"/>
-              <rect x="272" y="330" width="86" height="316" rx="3" fill="url(#hWin)"/>
-              <path d="M272 330h86" stroke="#e2cb98" stroke-opacity=".35" stroke-width="1.2"/>
-
-              <rect x="372" y="196" width="112" height="450" rx="3" fill="url(#hTower)"/>
-              <rect x="372" y="196" width="112" height="450" rx="3" fill="url(#hWin)"/>
-              <path d="M372 196h112" stroke="#e2cb98" stroke-opacity=".5" stroke-width="1.6"/>
-              <rect x="404" y="150" width="48" height="48" rx="2" fill="#1d4738"/>
-              <rect x="404" y="150" width="48" height="48" rx="2" fill="url(#hWin2)"/>
-
-              <rect x="518" y="316" width="92" height="330" rx="3" fill="url(#hTower)"/>
-              <rect x="518" y="316" width="92" height="330" rx="3" fill="url(#hWin)"/>
-              <path d="M518 316h92" stroke="#e2cb98" stroke-opacity=".35" stroke-width="1.2"/>
-
-              <rect x="626" y="262" width="96" height="384" rx="3" fill="url(#hTower)"/>
-              <rect x="626" y="262" width="96" height="384" rx="3" fill="url(#hWin)"/>
-              <path d="M626 262h96" stroke="#e2cb98" stroke-opacity=".4" stroke-width="1.4"/>
-            </g>
-
-            <!-- 공원 지형 -->
-            <path d="M0 600c96-46 168-30 250-6 92 26 168 6 250-18 78-23 168-18 300 22v182H0Z" fill="#0d2a21"/>
-            <path d="M0 626c110-30 190-16 268 4 96 24 196 2 280-14 74-14 150-4 252 24" fill="none" stroke="#e2cb98" stroke-opacity=".22" stroke-width="1.2"/>
-
-            <!-- 수목 -->
-            <g fill="#0a231b" stroke="#e2cb98" stroke-opacity=".1">
-              <circle cx="78" cy="640" r="40"/><circle cx="128" cy="656" r="30"/>
-              <circle cx="214" cy="668" r="36"/><circle cx="286" cy="650" r="26"/>
-              <circle cx="470" cy="664" r="34"/><circle cx="540" cy="650" r="27"/>
-              <circle cx="716" cy="660" r="38"/><circle cx="768" cy="644" r="29"/>
-            </g>
-            <g stroke="#e2cb98" stroke-opacity=".16" stroke-width="1">
-              <path d="M78 680v22M214 704v18M470 698v20M716 698v20"/>
-            </g>
-
-            <!-- 산책로 -->
-            <path d="M120 780c60-52 138-44 206-66 74-24 150-52 236-46 46 3 84 14 118 30" fill="none"
-                  stroke="#e2cb98" stroke-opacity=".18" stroke-width="6" stroke-linecap="round"/>
-          </svg>
-          <span class="hero-tag">이미지 준비 중 · 조감도로 교체 예정</span>
-        </div>
-        <figcaption class="hero-badge">
-          <span class="eb-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>
-            </svg>
-          </span>
-          <span>
-            <span class="eb-label">MODEL HOUSE</span>
-            <strong>1800-6589</strong>
-          </span>
-        </figcaption>
-      </figure>
     </div>
   </section>
 
@@ -861,7 +818,7 @@ section{scroll-margin-top:86px}
           <p class="lead">송암공원과 함께 조성되는 프리미엄 대단지, 송암공원 중흥S클래스 SK VIEW. 광주 남구 송하동 177-5번지 일원에 지하 3층~지상 27층, 17개동 1,575세대 규모로 들어섭니다.</p>
         </div>
         <div class="about-body">
-          <p>전용 <strong>84㎡(34평형)</strong>와 <strong>108㎡(42평형)</strong> 두 가지 면적으로 구성되며, 84㎡는 A·B·C 세 가지 타입으로 선택의 폭을 넓혔습니다.</p>
+          <p>전용 <strong>84㎡(34평형)</strong>와 <strong>108㎡(42평형)</strong> 두 가지 면적입니다. 84㎡는 A·B·C 세 타입으로 나뉘어 <strong>591 · 419 · 196세대</strong>, 108㎡는 <strong>369세대</strong>로 구성됩니다.</p>
           <p>1차 계약금 <strong>500만 원 정액제</strong>와 <strong>선착순 동·호수 지정 계약</strong>으로 진행되고 있습니다.</p>
         </div>
         <dl class="spec">
@@ -874,21 +831,52 @@ section{scroll-margin-top:86px}
           <div class="spec-row"><dt>분양문의</dt><dd><a href="tel:1800-6589" style="text-decoration:none;color:#15382c;font-weight:700">1800-6589</a></dd></div>
         </dl>
       </div>
-      <figure class="photo-slot" data-photo="about" data-ratio="4x3" data-alt="송암공원 중흥S클래스 SK VIEW 단지배치도">
-        <div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="m4 17 5.5-5 4.5 4 3-2.5L20 17"/>
-          </svg>
-          <p class="ph-title">단지배치도</p>
-          <p class="ph-sub">이미지 준비 중</p>
-        </div>
-        <figcaption class="ph-cap">이미지 준비 중 — 실제 단지배치도로 교체됩니다</figcaption>
+      <figure class="shot">
+        <button type="button" class="shot-btn" data-lightbox="images/siteplan.jpg" aria-label="단지배치도 크게 보기">
+          <img src="images/siteplan.jpg" alt="송암공원 중흥S클래스 SK VIEW 단지배치도 — 101동~117동 17개동, 총 1,575세대" width="1100" height="849" loading="lazy" decoding="async">
+          <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+        </button>
+        <figcaption class="shot-cap"><b>단지배치도 · 총 1,575세대</b>84㎡A 591세대 · 84㎡B 419세대 · 84㎡C 196세대 · 108㎡ 369세대 / 101동~117동 17개동</figcaption>
       </figure>
     </div>
   </section>
 
+  <!-- ================= 단지 조감 ================= -->
+  <section class="sec sec-cream" id="aerial">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Site View</p>
+        <h2>송암공원 지형을 따라<br>이어지는 17개동</h2>
+        <p class="lead">지하 3층~지상 27층, 17개동 1,575세대. 단지 안에는 휴게정원과 중앙광장이 들어섭니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
+      </div>
+      <div class="aerial-grid">
+        <figure class="shot aerial-main">
+          <button type="button" class="shot-btn" data-lightbox="images/aerial.jpg" aria-label="단지 조감도 크게 보기">
+            <img src="images/aerial.jpg" alt="송암공원 중흥S클래스 SK VIEW 단지 조감도 — 공원 지형을 따라 배치된 17개동" width="699" height="520" loading="lazy" decoding="async">
+            <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+          </button>
+        </figure>
+        <div class="aerial-side">
+          <figure class="shot">
+            <button type="button" class="shot-btn" data-lightbox="images/garden.jpg" aria-label="휴게정원 조감도 크게 보기">
+              <img src="images/garden.jpg" alt="단지 내 휴게정원 — 분수 광장과 파고라, 수목이 어우러진 중정" width="400" height="260" loading="lazy" decoding="async">
+              <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+            </button>
+          </figure>
+          <figure class="shot">
+            <button type="button" class="shot-btn" data-lightbox="images/plaza.jpg" aria-label="중앙광장 조감도 크게 보기">
+              <img src="images/plaza.jpg" alt="단지 내 중앙광장 — 어린이 놀이시설과 산책로" width="400" height="259" loading="lazy" decoding="async">
+              <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+            </button>
+          </figure>
+        </div>
+      </div>
+      <p class="gallery-note">※ 조감도와 단지 내 조경 이미지는 이해를 돕기 위한 것으로, 실제 시공과 다를 수 있습니다.</p>
+    </div>
+  </section>
+
   <!-- ================= 입지환경 ================= -->
-  <section class="sec sec-cream" id="location">
+  <section class="sec" id="location">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Location</p>
@@ -929,75 +917,234 @@ section{scroll-margin-top:86px}
           <span class="loc-kw">CULTURE</span>
         </article>
       </div>
-      <figure class="photo-slot loc-photo" data-photo="location" data-ratio="21x9" data-alt="송암공원 중흥S클래스 SK VIEW 입지 안내도">
-        <div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4Z"/><path d="M9 4v13M15 6.5v13"/>
-          </svg>
-          <p class="ph-title">입지 안내도</p>
-          <p class="ph-sub">이미지 준비 중</p>
-        </div>
-        <figcaption class="ph-cap">* 표시된 주변 환경은 사업 진행 및 개발 계획에 따라 달라질 수 있습니다.</figcaption>
+      <figure class="shot loc-photo">
+        <button type="button" class="shot-btn" data-lightbox="images/location.jpg" aria-label="입지환경 지도 크게 보기">
+          <img src="images/location.jpg" alt="송암공원 중흥S클래스 SK VIEW 입지환경 지도 — 제2순환도로·호덕IC·송암IC·호천역, 송암근린공원과 초등학교 부지" width="1600" height="1170" loading="lazy" decoding="async">
+          <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+        </button>
+        <figcaption class="shot-cap"><b>입지환경</b>제2순환도로·호덕IC·송암IC·호천역 인접, 송암근린공원과 초등학교(계획) 부지가 맞닿아 있습니다.</figcaption>
       </figure>
     </div>
   </section>
 
+  <!-- ================= 공원 프리미엄 ================= -->
+  <section class="sec sec-cream" id="park">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Park Premium</p>
+        <h2>학교도 공원도<br>한걸음에 만나는 삶</h2>
+        <p class="lead">송암근린공원 안에 활빛마당·솔빛마당·늘빛마당 세 가지 특화 공간이 조성됩니다. 단지 옆 초등학교(계획) 부지와 맞닿은 공원 생활권입니다.</p>
+      </div>
+      <div class="park-grid">
+        <div class="park-cards">
+          <article class="park-card">
+            <h3>활빛마당 <span>DYNAMIC PARK</span></h3>
+            <p class="park-sub">운동과 놀이, 다양한 체험을 즐길 수 있는 활력의 마당</p>
+            <ul>
+              <li>송암문화복지센터 — 주민 편의를 위한 복합문화시설</li>
+              <li>축구장 — 시민 체력 증진을 위한 공식 규격 축구장</li>
+              <li>송암야영장 — 도심 속 캠핑 공간</li>
+              <li>모험놀이터 · 발물놀이터</li>
+            </ul>
+          </article>
+          <article class="park-card">
+            <h3>솔빛마당 <span>ECO-HEALING PARK</span></h3>
+            <p class="park-sub">건강한 숲이 되어 다채로운 자연과 함께하는 힐링자생의 숲</p>
+            <ul>
+              <li>생태학습원 — 자연의 소중함을 배우는 생태학습 공간</li>
+              <li>복원숲 — 훼손지를 송암이 상징하는 소나무 숲으로 복원</li>
+              <li>숲멍터 — 자연과 도시경관을 조망할 수 있는 전망쉼터</li>
+              <li>솔빛 운동원 — 시민들의 체력단련을 위한 숲속 운동 공간</li>
+            </ul>
+          </article>
+          <article class="park-card">
+            <h3>늘빛마당 <span>COMMUNITY PARK</span></h3>
+            <p class="park-sub">주민들의 화합을 유도하는 행복한 커뮤니티의 장</p>
+            <ul>
+              <li>늘빛 마당 — 송암공원의 열린 진입부로 시민의 만남 공간</li>
+              <li>도시텃밭 — 주민들과 텃밭을 가꾸는 공동체 공간</li>
+              <li>늘빛 건강마당 — 주민들의 체력단련을 위한 운동 공간</li>
+            </ul>
+          </article>
+        </div>
+        <figure class="shot park-figure">
+          <button type="button" class="shot-btn" data-lightbox="images/park.jpg" aria-label="송암근린공원 특화 안내 크게 보기">
+            <img src="images/park.jpg" alt="송암근린공원 특화 안내 — 활빛마당·솔빛마당·늘빛마당 배치와 시설 소개" width="1007" height="2048" loading="lazy" decoding="async">
+            <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+          </button>
+          <figcaption class="shot-cap"><b>송암근린공원 특화 안내</b>이미지를 누르면 시설 배치와 설명을 크게 볼 수 있습니다.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 커뮤니티 센터 ================= -->
+  <section class="sec" id="community">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Community Center</p>
+        <h2>지하 1·2층에 담은<br>일상의 운동과 여가</h2>
+        <p class="lead">날씨와 상관없이 즐기는 실내 체육시설과 돌봄·회의 공간을 한 건물에 모았습니다.</p>
+      </div>
+      <div class="comm-grid">
+        <div class="comm-floors">
+          <article class="comm-floor">
+            <b>B1</b>
+            <h3>휘트니스 · 골프 · 돌봄</h3>
+            <ul>
+              <li>휘트니스센터 — 건강과 활력을 선사하는 다양한 운동시설</li>
+              <li>실내골프연습장 — 이웃과 함께 언제든 골프연습을 할 수 있는 공간</li>
+              <li>다함께 돌봄센터</li>
+              <li>입주민 회의실</li>
+            </ul>
+          </article>
+          <article class="comm-floor">
+            <b>B2</b>
+            <h3>실내체육 · 탁구</h3>
+            <ul>
+              <li>다목적 실내체육시설 — 날씨와 관계없이 다양한 운동을 즐길 수 있는 공간</li>
+              <li>탁구장</li>
+            </ul>
+          </article>
+          <p class="comm-note">※ 커뮤니티 시설의 구성과 운영 종목은 입주자 협의 및 사업 일정에 따라 변경될 수 있습니다.</p>
+        </div>
+        <figure class="shot comm-figure">
+          <button type="button" class="shot-btn" data-lightbox="images/community.jpg" aria-label="커뮤니티 센터 안내 크게 보기">
+            <img src="images/community.jpg" alt="커뮤니티 센터 안내 — 지하 1층 실내골프연습장·휘트니스센터·다함께 돌봄센터, 지하 2층 다목적 실내체육시설·탁구장" width="1100" height="1713" loading="lazy" decoding="async">
+            <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+          </button>
+          <figcaption class="shot-cap"><b>커뮤니티 센터 배치</b>B1 휘트니스·실내골프·돌봄시설 / B2 다목적 실내체육시설·탁구장</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= 평형안내 ================= -->
-  <section class="sec" id="plans">
+  <section class="sec sec-cream" id="plans">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Floor Plan</p>
-        <h2>전용 84㎡ · 108㎡<br>두 가지 선택</h2>
-        <p class="lead">실수요에 맞춘 84㎡ A·B·C 타입과 넉넉한 108㎡ 타입. 타입별 평면과 세부 면적은 상담으로 확인하실 수 있습니다.</p>
+        <h2>84㎡ A·B·C · 108㎡<br>네 가지 타입</h2>
+        <p class="lead">실수요에 맞춘 84㎡ A·B·C 타입과 넉넉한 108㎡ 타입. 타입을 눌러 평면도를 확인하고, 이미지를 누르면 크게 볼 수 있습니다.</p>
       </div>
-      <div class="plan-grid">
-        <article class="plan-card">
-          <div class="plan-head">
-            <p class="plan-area"><b>84</b><i>㎡</i></p>
-            <p class="plan-pye">34평형 · 3 TYPES</p>
-            <div class="plan-tags"><span>A 타입</span><span>B 타입</span><span>C 타입</span></div>
-          </div>
-          <figure class="plan-photo photo-slot" data-photo="plan84" data-ratio="4x3" data-alt="전용 84㎡ 평면도">
-            <div class="ph-inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 10.5h7v-7M10.5 14v6.5M14 10.5h6.5"/>
-              </svg>
-              <p class="ph-title">84㎡ 평면도</p>
-              <p class="ph-sub">이미지 준비 중</p>
-            </div>
+      <div class="plan-tabs" role="tablist" aria-label="평형 타입 선택">
+        <button type="button" class="plan-tab" role="tab" id="tab-84a" aria-controls="panel-84a" aria-selected="true" tabindex="0">
+          <b>84㎡A</b><span>33.18평형 · 591세대</span>
+        </button>
+        <button type="button" class="plan-tab" role="tab" id="tab-84b" aria-controls="panel-84b" aria-selected="false" tabindex="-1">
+          <b>84㎡B</b><span>34.26평형 · 419세대</span>
+        </button>
+        <button type="button" class="plan-tab" role="tab" id="tab-84c" aria-controls="panel-84c" aria-selected="false" tabindex="-1">
+          <b>84㎡C</b><span>33.44평형 · 196세대</span>
+        </button>
+        <button type="button" class="plan-tab" role="tab" id="tab-108" aria-controls="panel-108" aria-selected="false" tabindex="-1">
+          <b>108㎡</b><span>41.94평형 · 369세대</span>
+        </button>
+      </div>
+      <div class="plan-panels">
+        <div class="plan-panel" role="tabpanel" id="panel-84a" aria-labelledby="tab-84a" tabindex="0">
+          <figure class="shot">
+            <button type="button" class="shot-btn" data-lightbox="images/plan-84a.jpg" aria-label="84㎡A 평면도 크게 보기">
+              <img src="images/plan-84a.jpg" alt="전용 84㎡A 타입 평면도 — 4Bay 판상형, 침실 3, 드레스룸, 확장형 주방" width="1232" height="824" loading="lazy" decoding="async">
+              <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+            </button>
           </figure>
-          <div class="plan-foot">
-            <p>전용 84㎡ · 타입별 면적 상이</p>
-            <a class="plan-link" href="tel:1800-6589">평면 상담
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
+          <div class="plan-spec">
+            <p class="plan-area"><b>84</b><i>㎡A</i></p>
+            <p class="plan-pye">33.18평형 · 591세대</p>
+            <div class="plan-tags"><span>4Bay 판상형</span><span>남향 위주</span></div>
+            <dl>
+              <div class="row"><dt>구조</dt><dd>판상형 · 4Bay</dd></div>
+              <div class="row"><dt>세대수</dt><dd>591세대</dd></div>
+              <div class="row"><dt>특화</dt><dd>드레스룸 · 확장형 주방</dd></div>
+            </dl>
+            <ul class="plan-feature">
+              <li>남향 위주 배치로 채광과 통풍이 뛰어난 4Bay 판상형</li>
+              <li>확장형 주방가구 + 엔지니어드스톤 주방상판, 4구 가스쿡탑</li>
+              <li>드레스룸(포스팅형 시스템가구 + 메탈슬라이딩도어), 주방·복도 팬트리, 세탁선반</li>
+              <li>스탠드형 화장대 + 의류관리기장, 아일랜드장 · 냉장고장</li>
+            </ul>
+            <a class="plan-link" href="tel:1800-6589">84㎡A 타입 상담 <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-        </article>
-
-        <article class="plan-card">
-          <div class="plan-head">
+        </div>
+        <div class="plan-panel" role="tabpanel" id="panel-84b" aria-labelledby="tab-84b" tabindex="0" hidden>
+          <figure class="shot">
+            <button type="button" class="shot-btn" data-lightbox="images/plan-84b.jpg" aria-label="84㎡B 평면도 크게 보기">
+              <img src="images/plan-84b.jpg" alt="전용 84㎡B 타입 평면도 — 타워형 3면 창 거실과 알파룸" width="1220" height="839" loading="lazy" decoding="async">
+              <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+            </button>
+          </figure>
+          <div class="plan-spec">
+            <p class="plan-area"><b>84</b><i>㎡B</i></p>
+            <p class="plan-pye">34.26평형 · 419세대</p>
+            <div class="plan-tags"><span>타워형</span><span>3면 창</span><span>알파룸</span></div>
+            <dl>
+              <div class="row"><dt>구조</dt><dd>타워형 · 3면 창</dd></div>
+              <div class="row"><dt>세대수</dt><dd>419세대</dd></div>
+              <div class="row"><dt>특화</dt><dd>알파룸(옵션)</dd></div>
+            </dl>
+            <ul class="plan-feature">
+              <li>3면 창으로 탁 트인 조망의 거실, 라이프스타일별 알파룸</li>
+              <li>개방감 높은 타워형 구조설계, 84㎡B 타입</li>
+              <li>침실 3 · 욕실 2 구성에 알파룸 1(옵션)</li>
+              <li>드레스룸·복도 팬트리, 확장형 주방 + 4구 가스쿡탑</li>
+            </ul>
+            <a class="plan-link" href="tel:1800-6589">84㎡B 타입 상담 <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="plan-panel" role="tabpanel" id="panel-84c" aria-labelledby="tab-84c" tabindex="0" hidden>
+          <figure class="shot">
+            <button type="button" class="shot-btn" data-lightbox="images/plan-84c.jpg" aria-label="84㎡C 평면도 크게 보기">
+              <img src="images/plan-84c.jpg" alt="전용 84㎡C 타입 평면도 — 2면 창호 거실과 알파룸" width="1236" height="816" loading="lazy" decoding="async">
+              <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+            </button>
+          </figure>
+          <div class="plan-spec">
+            <p class="plan-area"><b>84</b><i>㎡C</i></p>
+            <p class="plan-pye">33.44평형 · 196세대</p>
+            <div class="plan-tags"><span>2면 창호</span><span>알파룸</span><span>3면 발코니</span></div>
+            <dl>
+              <div class="row"><dt>구조</dt><dd>판상형 · 2면 창호</dd></div>
+              <div class="row"><dt>세대수</dt><dd>196세대</dd></div>
+              <div class="row"><dt>특화</dt><dd>알파룸(옵션)</dd></div>
+            </dl>
+            <ul class="plan-feature">
+              <li>햇살 가득한 2면 창호의 거실과 알파룸</li>
+              <li>넉넉한 서비스면적의 3면 발코니를 활용한 개방감 높은 구조</li>
+              <li>알파룸(옵션)·팬트리·드레스룸·파우더룸으로 다양한 수납</li>
+              <li>확장형 주방 + 엔지니어드스톤 주방상판, 4구 가스쿡탑</li>
+            </ul>
+            <a class="plan-link" href="tel:1800-6589">84㎡C 타입 상담 <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="plan-panel" role="tabpanel" id="panel-108" aria-labelledby="tab-108" tabindex="0" hidden>
+          <figure class="shot">
+            <button type="button" class="shot-btn" data-lightbox="images/plan-108.jpg" aria-label="108㎡ 평면도 크게 보기">
+              <img src="images/plan-108.jpg" alt="전용 108㎡ 타입 평면도 — 4Bay 판상형, 화장형 드레스룸, 현관 팬트리" width="1236" height="799" loading="lazy" decoding="async">
+              <span class="zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6M11 8.4v5.2M8.4 11h5.2"/></svg>크게 보기</span>
+            </button>
+          </figure>
+          <div class="plan-spec">
             <p class="plan-area"><b>108</b><i>㎡</i></p>
-            <p class="plan-pye">42평형 · 40평대</p>
-            <div class="plan-tags"><span>전용 108.5276㎡</span><span>공급 138.6611㎡</span></div>
+            <p class="plan-pye">41.94평형 · 369세대</p>
+            <div class="plan-tags"><span>4Bay 판상형</span><span>전용 108.5276㎡</span><span>공급 138.6611㎡</span></div>
+            <dl>
+              <div class="row"><dt>구조</dt><dd>판상형 · 4Bay</dd></div>
+              <div class="row"><dt>세대수</dt><dd>369세대</dd></div>
+              <div class="row"><dt>전용면적</dt><dd>108.5276㎡</dd></div>
+              <div class="row"><dt>공급면적</dt><dd>138.6611㎡</dd></div>
+            </dl>
+            <ul class="plan-feature">
+              <li>햇살 가득한 4Bay 판상형 구조로 우수한 채광과 맞통풍</li>
+              <li>실용적인 물품 보관공간, 현관 팬트리와 개방감 높은 다이닝</li>
+              <li>화장형 드레스룸(옵션)·파우더룸·주방 팬트리(옵션)</li>
+              <li>건식욕실(카운터세면기) · 4구 가스쿡탑 · 아일랜드장</li>
+            </ul>
+            <a class="plan-link" href="tel:1800-6589">108㎡ 타입 상담 <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-          <figure class="plan-photo photo-slot" data-photo="plan108" data-ratio="4x3" data-alt="전용 108㎡ 평면도">
-            <div class="ph-inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 10.5h7v-7M10.5 14v6.5M14 10.5h6.5"/>
-              </svg>
-              <p class="ph-title">108㎡ 평면도</p>
-              <p class="ph-sub">이미지 준비 중</p>
-            </div>
-          </figure>
-          <div class="plan-foot">
-            <p>넉넉한 40평대 · 가족형 설계</p>
-            <a class="plan-link" href="tel:1800-6589">평면 상담
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </article>
+        </div>
       </div>
-      <p class="plan-note">* 면적은 분양 공고 기준이며, 타입별 세부 면적·평면·마감은 상담 시 확인하실 수 있습니다. 도면과 이미지는 이해를 돕기 위한 것으로 실제와 다를 수 있습니다.</p>
+      <p class="plan-note">* 면적은 분양 공고 기준입니다. 옵션으로 표기한 항목(주방특화·알파룸·화장형 드레스룸 등)과 타입별 세부 면적·마감은 계약 조건 및 상담 내용에 따라 달라질 수 있으며, 도면과 이미지는 이해를 돕기 위한 것으로 실제와 다를 수 있습니다.</p>
     </div>
   </section>
 
@@ -1254,6 +1401,18 @@ section{scroll-margin-top:86px}
   </div>
 </div>
 
+<!-- ================= 이미지 확대 보기 ================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="이미지 크게 보기" hidden>
+  <button type="button" class="lb-close" id="lbClose" aria-label="닫기">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lbImg" alt="">
+  <p class="lb-cap" id="lbCap"></p>
+  <div class="lb-tools">
+    <a id="lbOpen" href="#" target="_blank" rel="noopener">새 탭에서 원본 크기로 보기</a>
+  </div>
+</div>
+
 <script>
 (function () {
   'use strict';
@@ -1278,19 +1437,81 @@ section{scroll-margin-top:86px}
   var SALES_PHONE           = '1800-6589';
 
   /* =====================================================================
-     [설정 2] 사진 경로
+     [설정 2] 이미지 확대 보기 · 평형 타입 탭
      ---------------------------------------------------------------------
-     이 HTML 파일과 같은 폴더에 사진을 두고 파일명만 적으면,
-     각 섹션의 자리표시자가 자동으로 실제 사진으로 바뀝니다. 예)
-       hero: 'songam-jo-gamdo.jpg'
+     이미지는 index.html과 같은 위치의 images/ 폴더에 있습니다.
+     HTML에서 <button data-lightbox="이미지경로"> 를 누르면 확대 창이 열립니다.
      ===================================================================== */
-  var PHOTOS = {
-    hero:     '',
-    about:    '',
-    location: '',
-    plan84:   '',
-    plan108:  ''
-  };
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  var lbOpen = document.getElementById('lbOpen');
+  var lbCloseBtn = document.getElementById('lbClose');
+  var lbTrigger = null;
+
+  function openLightbox(btn) {
+    var src = btn.getAttribute('data-lightbox');
+    if (!src) return;
+    var inner = btn.querySelector('img');
+    lbImg.src = src;
+    lbImg.alt = inner ? inner.alt : '';
+    lbCap.textContent = btn.getAttribute('data-caption') || (inner ? inner.alt : '');
+    lbOpen.href = src;
+    lbTrigger = btn;
+    lightbox.hidden = false;
+    document.body.classList.add('lb-open');
+    lbCloseBtn.focus();
+  }
+
+  function closeLightbox() {
+    if (lightbox.hidden) return;
+    lightbox.hidden = true;
+    lbImg.removeAttribute('src');
+    document.body.classList.remove('lb-open');
+    if (lbTrigger && lbTrigger.focus) lbTrigger.focus();
+    lbTrigger = null;
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lightbox]'), function (btn) {
+    btn.addEventListener('click', function () { openLightbox(btn); });
+  });
+  lbCloseBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  /* ---------------- 평형 탭 ---------------- */
+  var planTabs = Array.prototype.slice.call(document.querySelectorAll('.plan-tab'));
+
+  function selectPlanTab(tab, moveFocus) {
+    planTabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      if (!panel) return;
+      if (on) panel.removeAttribute('hidden');
+      else panel.setAttribute('hidden', '');
+    });
+    if (moveFocus) tab.focus();
+  }
+
+  planTabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectPlanTab(tab, false); });
+    tab.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowRight') next = planTabs[(i + 1) % planTabs.length];
+      else if (e.key === 'ArrowLeft') next = planTabs[(i - 1 + planTabs.length) % planTabs.length];
+      else if (e.key === 'Home') next = planTabs[0];
+      else if (e.key === 'End') next = planTabs[planTabs.length - 1];
+      if (!next) return;
+      e.preventDefault();
+      selectPlanTab(next, true);
+    });
+  });
 
   var DOW = ['일', '월', '화', '수', '목', '금', '토'];
   var TIMES = (function () {
@@ -1334,34 +1555,6 @@ section{scroll-margin-top:86px}
     if (d.length <= 3) return d;
     if (d.length <= 7) return d.slice(0, 3) + '-' + d.slice(3);
     return d.slice(0, 3) + '-' + d.slice(3, 7) + '-' + d.slice(7, 11);
-  }
-
-  /* ---------------- 사진 슬롯 ---------------- */
-  function applyPhotos() {
-    var slots = document.querySelectorAll('[data-photo]');
-    for (var i = 0; i < slots.length; i++) {
-      var el = slots[i];
-      var key = el.getAttribute('data-photo');
-      var src = PHOTOS[key];
-      if (!src) continue;
-
-      var isHero = el.classList.contains('hero-figure');
-      var target = isHero ? el.querySelector('.hero-frame') : el;
-      if (!target) continue;
-
-      var art = el.querySelector('.hero-art');
-      if (art) art.hidden = true;
-
-      var img = document.createElement('img');
-      img.src = src;
-      img.alt = el.getAttribute('data-alt') || '송암공원 중흥S클래스 SK VIEW';
-      img.setAttribute('loading', isHero ? 'eager' : 'lazy');
-      img.setAttribute('decoding', 'async');
-      if (isHero) img.className = 'hero-photo';
-
-      el.classList.add('has-photo');
-      target.insertBefore(img, target.firstChild);
-    }
   }
 
   /* ---------------- 달력 ---------------- */
@@ -1879,7 +2072,6 @@ section{scroll-margin-top:86px}
   window.addEventListener('scroll', onScroll, { passive: true });
 
   /* ---------------- 초기화 ---------------- */
-  applyPhotos();
   renderCalendar();
   renderTimes();
   updateSummary();
