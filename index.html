@@ -109,10 +109,8 @@ button{font-family:inherit}
 }
 .site-header.is-scrolled{box-shadow:0 10px 34px -22px rgba(13,43,34,.35);background:rgba(255,255,255,.96)}
 .header-inner{display:flex;align-items:center;gap:22px;height:72px}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--green-800);flex:none}
-.brand-mark{width:32px;height:32px;flex:none}
-.brand-text strong{display:block;font-size:14.5px;font-weight:700;letter-spacing:-.02em;line-height:1.25}
-.brand-text span{display:block;font-size:9.5px;font-weight:700;letter-spacing:.3em;color:var(--gold);line-height:1.4}
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--green-800);flex:none;flex-shrink:1;min-width:0}
+.brand-logo{display:block;height:38px;width:auto;max-width:100%;object-fit:contain}
 .nav{display:flex;gap:26px;margin-left:auto}
 .nav a{
   position:relative;font-size:14.5px;color:#4c5a53;text-decoration:none;font-weight:500;
@@ -682,8 +680,7 @@ body.lb-open{overflow:hidden}
   .stat{padding:20px 18px}
   .stat dd{font-size:24px}
   .header-inner{height:64px;gap:12px}
-  .brand-text strong{font-size:13px}
-  .brand-mark{width:28px;height:28px}
+  .brand-logo{height:30px}
   .header-call{height:40px;padding:0 14px}
   .header-call small{display:none}
 }
@@ -732,21 +729,14 @@ body.lb-open{overflow:hidden}
        park.jpg         송암근린공원 특화 안내 (활빛·솔빛·늘빛마당)
        community.jpg    커뮤니티 센터 (B1·B2)
        plan-84a/b/c.jpg · plan-108.jpg  타입별 평면도
+       logo.png         상단 헤더 로고 (투명 배경)
      ※ 방문예약 알림 연동은 <script> 상단 NOTIFICATION_ENDPOINT 값 하나로 동작합니다.
      ============================================================ -->
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="송암공원 중흥S클래스 SK VIEW 홈">
-      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="18.5" fill="none" stroke="#c2a15e" stroke-width="1.2"/>
-        <path d="M12 26.5V17l8-4.6 8 4.6v9.5" fill="none" stroke="#15382c" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M17 26.5v-5.2h6v5.2" fill="none" stroke="#15382c" stroke-width="1.6" stroke-linejoin="round"/>
-      </svg>
-      <span class="brand-text">
-        <strong>송암공원 중흥S클래스</strong>
-        <span>SK VIEW</span>
-      </span>
+      <img class="brand-logo" src="images/logo.png" alt="송암공원 중흥S-클래스 SK VIEW" width="680" height="143" decoding="async">
     </a>
     <nav class="nav" aria-label="주요 섹션">
       <a href="#about">사업개요</a>
@@ -983,7 +973,7 @@ body.lb-open{overflow:hidden}
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Community Center</p>
-        <h2>지하 1·2층에 담은<br>일상의 운동과 여가</h2>
+        <h2>단지 안에서 누리는<br>일상의 운동과 여가</h2>
         <p class="lead">날씨와 상관없이 즐기는 실내 체육시설과 돌봄·회의 공간을 한 건물에 모았습니다.</p>
       </div>
       <div class="comm-grid">
